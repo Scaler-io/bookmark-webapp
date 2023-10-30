@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { appReducers } from './store/app.state';
 import { ThemeEffect } from './state/theme/theme.effect';
+import { NavbarModule } from './shared/navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ThemeEffect } from './state/theme/theme.effect';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NavbarModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([ThemeEffect])
   ],
