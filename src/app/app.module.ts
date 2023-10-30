@@ -8,6 +8,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { appReducers } from './store/app.state';
 import { ThemeEffect } from './state/theme/theme.effect';
 import { NavbarModule } from './shared/navbar/navbar.module';
+import { HeroModule } from './feature/hero/hero.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavbarModule } from './shared/navbar/navbar.module';
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
+    HeroModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([ThemeEffect])
   ],
