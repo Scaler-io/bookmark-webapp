@@ -9,20 +9,20 @@ import { appReducers } from './store/app.state';
 import { ThemeEffect } from './state/theme/theme.effect';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { HeroModule } from './feature/hero/hero.module';
+import { AppFeatureModule } from './feature/app-feature/app-feature.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
     HeroModule,
+    AppFeatureModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([ThemeEffect])
+    EffectsModule.forRoot([ThemeEffect]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
